@@ -1,9 +1,8 @@
 package africa.ucj.sayMeBlog.dtos.responses;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-public class RegisterUserResponse {
+public class RegisterBlogResponse {
     private String message;
 }

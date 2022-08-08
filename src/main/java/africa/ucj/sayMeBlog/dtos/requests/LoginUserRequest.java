@@ -3,8 +3,7 @@ package africa.ucj.sayMeBlog.dtos.requests;
 import lombok.Data;
 
 @Data
-public class RegisterUserRequest {
-    private String userId;
-    private String email;
+public class LoginUserRequest {
+    private String userName;
     private String password;
 }
