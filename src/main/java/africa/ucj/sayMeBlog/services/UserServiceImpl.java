@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService{
     public RegisterUserResponse registerUser(RegisterUserRequest request) {
         for (User user : userRepository.findAll()){
             if(user.getUserName().equals(request.getEmail())){
-                throw new UserExistException("User already exists");
+                throw new UserExistException("User already exists, try another unique username");
             }
         }
         User user = new User();
@@ -49,7 +49,6 @@ public class UserServiceImpl implements UserService{
             throw new UserNotFoundExceptions(String.format("user with %s not found", email));
         }
         return foundUser;
-
     }
 
     @Override
@@ -65,6 +64,12 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> findAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public void deleteUer(User user) {
+        var foundUser = getUser(user.getId());
+        userRepository.delete(foundUser);
     }
 
     @Override

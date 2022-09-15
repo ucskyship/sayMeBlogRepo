@@ -1,11 +1,13 @@
 package africa.ucj.sayMeBlog.services;
 
-import africa.ucj.sayMeBlog.data.models.Articles;
+import africa.ucj.sayMeBlog.data.models.Article;
 import africa.ucj.sayMeBlog.data.models.Blog;
 import africa.ucj.sayMeBlog.data.models.Comment;
 import africa.ucj.sayMeBlog.data.models.User;
 import africa.ucj.sayMeBlog.dtos.requests.*;
 import africa.ucj.sayMeBlog.dtos.responses.RegisterUserResponse;
+import africa.ucj.sayMeBlog.exceptions.CommentNotFoundException;
+import africa.ucj.sayMeBlog.exceptions.NoArticleFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,73 +46,106 @@ public class ApplicationServiceImpl implements ApplicationService {
         var user = userService.getUser(request.getUserId());
         var blog = user.getBlog();
         blog.getArticles().add(article);
-        blogService.reSave(blog);
+        blog = blogService.reSave(blog);
+        user.setBlog(blog);
         userService.update(user);
     }
 
     @Override
     public void addCommentToArticle(CommentRequest commentRequest) {
-
+        var user = userService.getUser(commentRequest.getUserId());
+        var comment = commentService.save(commentRequest);
+        for (var article: user.getBlog().getArticles()){
+            if (article.getId().equals(commentRequest.getArticleId())){
+                article.getComments().add(comment);
+                articleService.updateArticle(article);
+                return;
+            }
+        }
     }
 
     @Override
     public User getUser(String id) {
-        return null;
+        return userService.getUser(id);
     }
 
     @Override
     public Blog getUserBlog(String userId) {
-        return null;
+        return userService.getUser(userId).getBlog();
     }
 
     @Override
-    public List<Articles> getArticles(String userId) {
-        return null;
+    public List<Article> getAllArticles(String userId) {
+        var foundUser = userService.getUser(userId);
+        return foundUser.getBlog().getArticles();
     }
 
     @Override
-    public List<Comment> getCommentsFromUserArticle(CommentRequest request) {
-        return null;
+    public List<Comment> getCommentsFromUserArticle(String articleId) {
+        return articleService.getComment(articleId);
     }
 
     @Override
-    public User update(RegisterUserRequest request) {
-        return null;
+    public void update(RegisterUserRequest request) {
+        var foundUser = getUser(request.getUserId());
+        foundUser.setUserName(request.getEmail());
+        foundUser.setPassword(request.getPassword());
+        userService.update(foundUser);
     }
 
     @Override
-    public Blog updateUserBlog(BlogRequest request) {
-        return null;
+    public void updateUserBlog(BlogRequest request) {
+        getUser(request.getUserId());
+        var foundBlog = getUserBlog(request.getBlogName());
+        foundBlog.setBlogName(request.getBlogName());
+        blogService.reSave(foundBlog);
     }
 
     @Override
-    public List<Articles> updateArticle(ArticleRequest request) {
-        return null;
+    public void updateArticle(ArticleRequest request) {
+        getUser(request.getUserId());
+        var foundArticle = articleService.getArticle(request.getArticleId());
+        foundArticle.setTittle(request.getTittle());
+        foundArticle.setBody(request.getBody());
+        articleService.updateArticle(foundArticle);
     }
 
     @Override
-    public List<Comment> updateCommentsFromUserArticle(CommentRequest request) {
-        return null;
+    public void updateCommentsFromUserArticle(CommentRequest request) throws CommentNotFoundException {
+        getUser(request.getUserId());
+        articleService.getArticle(request.getArticleId());
+        var foundComment = commentService.getComment(request.getCommentId());
+        foundComment.setComment(request.getCommentBody());
+        commentService.updateComment(foundComment);
     }
 
     @Override
     public String deleteUser(DeleteRequest deleteUserRequest) {
-        return null;
+        userService.deleteUer(getUser(deleteUserRequest.getUserId()));
+        return "successful";
     }
 
     @Override
     public String deleteBlog(DeleteRequest deleteBlogRequest) {
-        return null;
+        var foundUser = getUser(deleteBlogRequest.getUserId());
+        var userBlog = foundUser.getBlog();
+        blogService.deleteBlog(userBlog.getId());
+        return "deleted";
     }
 
     @Override
     public String deleteArticle(DeleteRequest deleteArticleRequest) {
-        return null;
+//        var foundUser = getUser(deleteArticleRequest.getUserId());
+//        var foundBlog = getUserBlog(foundUser.getId());
+        var foundArticle = articleService.getArticle(deleteArticleRequest.getArticleId());
+        articleService.deleteArticle(foundArticle.getId());
+        return "deleted successful";
     }
 
     @Override
-    public String deleteComment(DeleteRequest deleteCommentRequest) {
-        return null;
+    public String deleteComment(DeleteRequest deleteCommentRequest) throws CommentNotFoundException {
+        commentService.getComment(deleteCommentRequest.getCommentId());
+        return "successful";
     }
 
     @Override
@@ -129,5 +164,17 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Override
     public User findUserByUsername(String username) {
         return userService.findUserByUserName(username);
+    }
+
+    @Override
+    public Article getAnArticle(String tittle, String id) {
+        var user = userService.getUser(id);
+        for (var article:user.getBlog().getArticles()){
+            if(article.getTittle().equals(tittle)){
+                return article;
+            }
+        }
+        throw new NoArticleFound("not found");
+
     }
 }

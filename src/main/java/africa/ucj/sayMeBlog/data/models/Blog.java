@@ -17,5 +17,5 @@ public class Blog {
     private String blogName;
 
     @DBRef
-    private  List<Articles> articles = new ArrayList<>();
+    private  List<Article> articles = new ArrayList<>();
 }

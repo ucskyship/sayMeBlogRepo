@@ -8,8 +8,6 @@ public interface BlogService {
     Blog getBlog(String id);
     String updateBlog(String id, BlogRequest blogRequest);
     String deleteBlog(String id);
-
-    void reSave(Blog blog);
-
+    Blog reSave(Blog blog);
     void deleteAll();
 }

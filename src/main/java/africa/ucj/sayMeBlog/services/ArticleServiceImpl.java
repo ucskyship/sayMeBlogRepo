@@ -1,27 +1,33 @@
 package africa.ucj.sayMeBlog.services;
 
-import africa.ucj.sayMeBlog.data.models.Articles;
+import africa.ucj.sayMeBlog.data.models.Article;
+import africa.ucj.sayMeBlog.data.models.Comment;
 import africa.ucj.sayMeBlog.data.repositories.ArticleRepository;
+import africa.ucj.sayMeBlog.data.repositories.CommentRepository;
 import africa.ucj.sayMeBlog.dtos.requests.ArticleRequest;
 import africa.ucj.sayMeBlog.exceptions.NoArticleFound;
 import africa.ucj.sayMeBlog.utils.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ArticleServiceImpl implements ArticleService {
+    @Autowired
+    CommentRepository commentRepository;
     @Autowired
     ArticleRepository articleRepository;
 
     @Override
-    public Articles saveArticle(ArticleRequest articleRequest) {
-        Articles article = new Articles();
+    public Article saveArticle(ArticleRequest articleRequest) {
+        Article article = new Article();
         Mapper.mapRequestToArticle(articleRequest, article);
         return articleRepository.save(article);
     }
 
     @Override
-    public Articles getArticle(String id) {
+    public Article getArticle(String id) {
         var foundArticle = articleRepository.findById(id);
         if (foundArticle.isPresent()){
             return foundArticle.get();
@@ -30,7 +36,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Articles editArticle(String id, ArticleRequest articleRequest) {
+    public Article editArticle(String id, ArticleRequest articleRequest) {
         var foundArticle = articleRepository.findById(id);
         if(foundArticle.isPresent()){
             Mapper.mapRequestToArticle(articleRequest, foundArticle.get());
@@ -47,11 +53,23 @@ public class ArticleServiceImpl implements ArticleService {
             articleRepository.delete(foundArticle.get());
             return "article deleted";
         }
-        return null;
+        return "unsuccessful";
     }
 
     @Override
     public void deleteAll() {
         articleRepository.deleteAll();
     }
+
+    @Override
+    public void updateArticle(Article article) {
+        articleRepository.save(article);
+    }
+
+    @Override
+    public List<Comment> getComment(String articleId) {
+        var foundArticle = articleRepository.findById(articleId);
+        return foundArticle.map(Article::getComments).orElseThrow(()-> new NoArticleFound("article not found"));
+    }
+
 }

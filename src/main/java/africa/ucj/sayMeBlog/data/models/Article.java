@@ -10,7 +10,7 @@ import java.util.List;
 
 @Document
 @Data
-public class Articles {
+public class Article {
     @Id
     private String id;
     private String tittle;

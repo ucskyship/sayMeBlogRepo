@@ -4,51 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed5221d-a18f-47b6-b282-276d81589f20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/ArticleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/CommentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/DeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/LoginUserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/responses/RegisterBlogResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/NoArticleFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/UserExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/services/ApplicationServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ed5221d-a18f-47b6-b282-276d81589f20" name="Changes" comment="updated today">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/controllers/BlogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Articles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Articles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Blog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/BlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/data/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/AddUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/AddUserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/BlogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/BlogRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/RegisterUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/RegisterUserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/responses/AddUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/responses/AddUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/responses/RegisterUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/responses/RegisterUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/BlogNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/BlogNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/UserExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/UserNotFoundExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/UserNotFoundExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/CommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/CommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/DeleteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/dtos/requests/DeleteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/CommentNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/exceptions/CommentNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ApplicationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/BlogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/CommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/services/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/ucj/sayMeBlog/utils/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/data/repositories/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/data/repositories/UserRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/services/UserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/services/ApplicationServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/ucj/sayMeBlog/services/ApplicationServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +76,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="africa.ucj.sayMeBlog.exceptions" />
       <recent name="africa.ucj.sayMeBlog.data.repositories" />
       <recent name="africa.ucj.sayMeBlog.services" />
       <recent name="africa.ucj.sayMeBlog.dtos.responses" />
       <recent name="africa.ucj.sayMeBlog.dtos.requests" />
-      <recent name="africa.ucj.sayMeBlog.exceptions" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -117,7 +93,38 @@
       <recent name="africa.ucj.sayMeBlog.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationServiceImplTest.addBlogToUser">
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="ApplicationServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sayMeBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.ucj.sayMeBlog.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.ucj.sayMeBlog.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.ucj.sayMeBlog.services.ApplicationServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationServiceImplTest.addArticleToUserBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sayMeBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.ucj.sayMeBlog.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.ucj.sayMeBlog.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.ucj.sayMeBlog.services.ApplicationServiceImplTest" />
+      <option name="METHOD_NAME" value="addArticleToUserBlog" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationServiceImplTest.addBlogToUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sayMeBlog" />
       <extension name="coverage">
@@ -134,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationServiceImplTest.registerUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationServiceImplTest.addCommentToArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sayMeBlog" />
       <extension name="coverage">
         <pattern>
@@ -144,38 +151,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.ucj.sayMeBlog.services" />
       <option name="MAIN_CLASS_NAME" value="africa.ucj.sayMeBlog.services.ApplicationServiceImplTest" />
-      <option name="METHOD_NAME" value="registerUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sayMeBlog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.ucj.sayMeBlog.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.ucj.sayMeBlog.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.ucj.sayMeBlog.data.repositories.UserRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest.logInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sayMeBlog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.ucj.sayMeBlog.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.ucj.sayMeBlog.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.ucj.sayMeBlog.data.repositories.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="logInTest" />
+      <option name="METHOD_NAME" value="addCommentToArticle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApplicationServiceImplTest.addBlogToUser" />
-        <item itemvalue="JUnit.ApplicationServiceImplTest.registerUser" />
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.UserRepositoryTest.logInTest" />
+        <item itemvalue="JUnit.ApplicationServiceImplTest" />
+        <item itemvalue="JUnit.ApplicationServiceImplTest.addCommentToArticle" />
+        <item itemvalue="JUnit.ApplicationServiceImplTest.addBlogToUser" />
+        <item itemvalue="JUnit.ApplicationServiceImplTest.addArticleToUserBlog" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +199,19 @@
       <workItem from="1659741026403" duration="2051000" />
       <workItem from="1659756192840" duration="598000" />
       <workItem from="1659873008675" duration="8112000" />
-      <workItem from="1659898674653" duration="6482000" />
+      <workItem from="1659898674653" duration="15946000" />
+      <workItem from="1660062833458" duration="3941000" />
+      <workItem from="1660509744384" duration="3778000" />
+      <workItem from="1660817934184" duration="30000" />
+      <workItem from="1662238473613" duration="1538000" />
+      <workItem from="1662369805361" duration="43000" />
+      <workItem from="1663004038315" duration="4981000" />
+      <workItem from="1663009209040" duration="499000" />
+      <workItem from="1663174604233" duration="11187000" />
+      <workItem from="1663192036569" duration="9374000" />
+      <workItem from="1663236375597" duration="2738000" />
+      <workItem from="1663247174255" duration="1330000" />
+      <workItem from="1663273643180" duration="615000" />
     </task>
     <servers />
   </component>
@@ -240,5 +228,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated today" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated today" />
   </component>
 </project>
